@@ -1,3 +1,9 @@
+<h1 style="font-size:36px;text-align:center;color:gray"> <b>Speech-To-Text</b> </h1>
+
+
+<img src="images/wavenet.gif" alt="audio_maping" style="width:900px;height:200px;">
+
+
 <h1 style="color:green">Business/Real World Problem</h1>
 
 <h2 style="color:blue">Description</h2>
