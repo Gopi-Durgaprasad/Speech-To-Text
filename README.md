@@ -1,7 +1,7 @@
 <h1 style="font-size:36px;text-align:center;color:gray"> <b>Speech-To-Text</b> </h1>
 
 
-<img src="images/wavenet.gif" alt="audio_maping" width:900px;height:200px />
+<img src="images/wavenet.gif" width="900" height="200"/>
 
 <img src="https://camo.githubusercontent.com/..." data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
 
