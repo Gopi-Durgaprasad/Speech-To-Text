@@ -177,6 +177,53 @@ English and Mandarin</a></li>
 
 <img src="images/lib_paths.png" alt="audio_maping" style="width:500px;height:500px;">
 
+<h2 style="color:blue">3.3 Data Preparation</h2>
+
+<p style="color:gray;font-size=15px">
+   Know we extract all .wav and .txt files, move to correspoinding folders    
+</p>
+
+Then create `train_mainfile.csv` and `test_mainfile.csv` those contains information about `wav_paths` and `txt_paths` for train and test data.
+
+Check the code in [Notebook](link)
+
+<h1 style="color:green">4. Exploratory Data Analysis (EDA)</h1>
+
+<h2 style="color:blue">4.1 Loading Data</h2>
+
+
+<ul style="color:gray;font-size=15px">
+    <li>1. Load <code>train_mainfile.csv</code></li>
+    <li>2. for EDA we take sample of data </li> 
+    
+</ul>
+
+<h2 style="color:blue">4.2 Data Exploration</h2>
+
+
+<ul style="color:gray;font-size=15px">
+    <li>1. Let's listen to .wav file </li>
+    <li>2. Check out corresponding label text for .wav file </li>
+    <li>3. Adding new column duration of audio to trine_sample dataframe</li>
+    <li>4. Cumulative Distribution Function (CDF) and (PDF) for durations</li>
+</ul>
+
+<h3>4.2.1. Let's listen to .wav file</h3>
+
+<audio id="ID004" source src="images/1859-145701-0003.wav"></audio><button onclick="playAudio('ID004')" type="button">play4</button> 
+<script>
+function playAudio(audio_element) {
+	var x = document.getElementById(audio_element);
+	x.play();
+}
+</script>
+
+
+
+
+
+
+
 
 
 
