@@ -242,7 +242,21 @@ Wav Plot :
 
 **Observation:** From above frequency the most frequecy characters are ' '(space), 'E', 'T' and the low frequency characters are 'Z', 'X', ''', 'J' , 'Q'
 
+<h3>4.3.3. Frequency of words</h3>
 
+Number of unique words :  16421
+
+<img src="images/word_cloud.png" />
+<img src="images/word_cloud_2.png"/>
+
+<h3>4.3.4. Cumulative Distribution Function (CDF) and (PDF) for word frequency</h3>
+
+<p float="left">
+  <img src="images/word_pdf.png" width="400" />
+  <img src="images/word_cdf.png" width="400" />
+</p>
+
+**Observation:** from the above plots we observe very few words have high frequency, most of words are low frequency
 
 
 
