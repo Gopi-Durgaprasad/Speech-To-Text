@@ -112,5 +112,70 @@ English and Mandarin</a></li>
         </ul>
     </li>
  </ul>
+ 
+ <h1 style="color:green">3. Data Preparation</h1>
+ 
+ <h2 style="color:blue">3.1 Data Folders</h2>
+
+`
+data --> train --> wav --> 1.wav
+                         --> 2.wav
+                         --> .....
+                         --> .....
+                         --> lastid.wav
+                 --> txt --> 1.txt
+                         --> 2.txt
+                         --> .....
+                         --> .....
+                         --> lastid.txt
+       --> test  --> wav --> 1.wav
+                         --> 2.wav
+                         --> .....
+                         --> .....
+                         --> lastid.wav
+                 --> txt --> 1.txt
+                         --> 2.txt
+                         --> .....
+                         --> .....
+                         --> lastid.txt
+       --> val   --> wav --> 1.wav
+                         --> 2.wav
+                         --> .....
+                         --> .....
+                         --> lastid.wav
+                 --> txt --> 1.txt
+                         --> 2.txt
+                         --> .....
+                         --> .....
+                         --> lastid.txt
+       --> train_mainfile.csv
+       --> text_mainfile.csv
+       --> val_mainfile.csv`
+
+<p style="color:gray;font-size=15px">
+    <p1>1. Create new folder called<code>data</code></p1><br>
+    <p1>2. Create new folders <code>data/train, data/text, data/val</code></p1><br>
+    <p1>3. Create new folders <code>data/train/wav, data/train/txt && data/test/wav, data/test/txt && data/val/wav, data/val/txt</code></p1><br>
+    <p1>4. We are trying to put all traing .wav files in <code>data/train/wav</code> and all text files corresponding to .wav files put in <code>data/train/txt</code>, test and val also</p1>
+    <p1>5. Then we create a <code>train_mainfile.csv, text_mainfile.csv, val_mainfile.csv</code> those contains all file paths of .wav and .txt corresponding folders.</p1><br>
+    
+    
+</p>
+
+<h2 style="color:blue">3.2 Downloading Data</h2>
+
+
+<p style="color:gray;font-size=15px">
+    <p1>1. Download LibriSpeech datasets <a href="http://www.openslr.org/resources/12/train-clean-360.tar.gz">train-clean-360.tar.gz</a>, <a href="http://www.openslr.org/resources/12/test-clean.tar.gz">test-clean.tar.gz</a> and <a href="http://www.openslr.org/resources/12/dev-clean.tar.gz">dev-clean.tar.gz</a> keep in <code>data</code> folder</p1><br>
+    <p1>2. Then extract each file and move .wav files into corresponding files we are created</p1><br>
+    <p1>3. The folders look like this</p1>
+    
+    
+    
+</p>
+
+<img src="images/lib_paths.png" alt="audio_maping" style="width:500px;height:500px;">
+
+
 
 
