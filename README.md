@@ -117,8 +117,8 @@ English and Mandarin</a></li>
  
  <h2 style="color:blue">3.1 Data Folders</h2>
 
-`
-data --> train --> wav --> 1.wav
+```
+  data --> train --> wav --> 1.wav
                          --> 2.wav
                          --> .....
                          --> .....
@@ -150,7 +150,8 @@ data --> train --> wav --> 1.wav
                          --> lastid.txt
        --> train_mainfile.csv
        --> text_mainfile.csv
-       --> val_mainfile.csv`
+       --> val_mainfile.csv
+```
 
 <p style="color:gray;font-size=15px">
     <p1>1. Create new folder called<code>data</code></p1><br>
