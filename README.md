@@ -200,26 +200,47 @@ Check the code in [Notebook](link)
 
 <h2 style="color:blue">4.2 Data Exploration</h2>
 
-
-<ul style="color:gray;font-size=15px">
-    <li>1. Let's listen to .wav file </li>
-    <li>2. Check out corresponding label text for .wav file </li>
-    <li>3. Adding new column duration of audio to trine_sample dataframe</li>
-    <li>4. Cumulative Distribution Function (CDF) and (PDF) for durations</li>
-</ul>
-
 <h3>4.2.1. Let's listen to .wav file</h3>
 
-<audio id="ID004" source src="images/1859-145701-0003.wav"></audio><button onclick="playAudio('ID004')" type="button">play4</button> 
-<script>
-function playAudio(audio_element) {
-	var x = document.getElementById(audio_element);
-	x.play();
-}
-</script>
+wav file : [1859-145701-0003.wav](https://github.com/Gopi-Durgaprasad/Speech-To-Text/blob/master/images/1859-145701-0003.wav)
 
+Text : ```AND THE OLD KING FELL ON HER NECK AND KISSED HER BUT SHE WAS VERY MUCH TROUBLED AND SAID DEAR FATHER LISTEN TO WHAT HAS BEFALLEN ME I SHOULD NEVER HAVE COME HOME AGAIN OUT OF THE GREAT WILD WOOD IF I HAD NOT COME TO AN IRON STOVE```
 
+Wav Plot :
 
+<img src="images/wave_plot.png">
+
+<h3>4.2.1. Cumulative Distribution Function (CDF) and (PDF) for duration</h3>
+
+<p float="left">
+  <img src="images/duration_pdf.png" width="400" />
+  <img src="images/duration_cdf.png" width="400" />
+</p>
+
+**Observation:** From above two plots we observe that most of durations in between 10sec to 16sec
+
+<h2 style="color:blue">4.3 Text Data Exploration</h2>
+
+<h3>4.3.1. Cumulative Distribution Function (CDF) and (PDF) for text_lengths</h3>
+
+<p float="left">
+  <img src="images/text_len_pdf.png" width="400" />
+  <img src="images/text_len_cdf.png" width="400" />
+</p>
+
+**Observation:** From above two plots we observe that most of text lengths in between 30 and 60
+
+<h3>4.3.2. Distributions of text_length and duration</h3>
+
+<img src="images/text_len_vs_duration.png">
+
+**Observation:** both are very different distributions
+
+<h3>4.3.2. Count plot of Characters</h3>
+
+<img src="images/character.png">
+
+**Observation:** From above frequency the most frequecy characters are ' '(space), 'E', 'T' and the low frequency characters are 'Z', 'X', ''', 'J' , 'Q'
 
 
 
