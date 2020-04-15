@@ -175,7 +175,7 @@ English and Mandarin</a></li>
     
 </p>
 
-<img src="images/lib_paths.png" alt="audio_maping" style="width:500px;height:500px;">
+<img src="images/lib_paths.png" alt="audio_maping" style="width:250px;height:250px;">
 
 <h2 style="color:blue">3.3 Data Preparation</h2>
 
