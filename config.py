@@ -5,8 +5,8 @@ class args:
     epochs = 70 # Number of training epochs
 
     # data
-    train_path = 
-    test_path = 
+    train_path = "../input/train_mainfile.csv"
+    test_path =  "../input/test_mainfile.csv"
     sample_rate = 16000 # sample rate for the data/model features 
     batch_size = 20 # Batch size of traing
     num_workers = 4 # Number of workers used in data-loading
@@ -29,4 +29,4 @@ class args:
     max_norm = 400 # Norm cutoff to prevent explosion of gradients
     learning_anneal: 1.1 # Annealing applied to learning rate after each epoch
 
-    
+
