@@ -1,3 +1,9 @@
+<h1 style="font-size:36px;text-align:center;color:gray"> <b>Speech-To-Text</b> </h1>
+
+
+<img src="images/wavenet.gif" width="900" height="300"/>
+
+
 <h1 style="color:green">Business/Real World Problem</h1>
 
 <h2 style="color:blue">Description</h2>
@@ -106,5 +112,153 @@ English and Mandarin</a></li>
         </ul>
     </li>
  </ul>
+ 
+ <h1 style="color:green">3. Data Preparation</h1>
+ 
+ <h2 style="color:blue">3.1 Data Folders</h2>
+
+```
+  data --> train --> wav --> 1.wav
+                         --> 2.wav
+                         --> .....
+                         --> .....
+                         --> lastid.wav
+                 --> txt --> 1.txt
+                         --> 2.txt
+                         --> .....
+                         --> .....
+                         --> lastid.txt
+       --> test  --> wav --> 1.wav
+                         --> 2.wav
+                         --> .....
+                         --> .....
+                         --> lastid.wav
+                 --> txt --> 1.txt
+                         --> 2.txt
+                         --> .....
+                         --> .....
+                         --> lastid.txt
+       --> val   --> wav --> 1.wav
+                         --> 2.wav
+                         --> .....
+                         --> .....
+                         --> lastid.wav
+                 --> txt --> 1.txt
+                         --> 2.txt
+                         --> .....
+                         --> .....
+                         --> lastid.txt
+       --> train_mainfile.csv
+       --> text_mainfile.csv
+       --> val_mainfile.csv
+```
+
+<p style="color:gray;font-size=15px">
+    <p1>1. Create new folder called<code>data</code></p1><br>
+    <p1>2. Create new folders <code>data/train, data/text, data/val</code></p1><br>
+    <p1>3. Create new folders <code>data/train/wav, data/train/txt && data/test/wav, data/test/txt && data/val/wav, data/val/txt</code></p1><br>
+    <p1>4. We are trying to put all traing .wav files in <code>data/train/wav</code> and all text files corresponding to .wav files put in <code>data/train/txt</code>, test and val also</p1>
+    <p1>5. Then we create a <code>train_mainfile.csv, text_mainfile.csv, val_mainfile.csv</code> those contains all file paths of .wav and .txt corresponding folders.</p1><br>
+    
+    
+</p>
+
+<h2 style="color:blue">3.2 Downloading Data</h2>
+
+
+<p style="color:gray;font-size=15px">
+    <p1>1. Download LibriSpeech datasets <a href="http://www.openslr.org/resources/12/train-clean-360.tar.gz">train-clean-360.tar.gz</a>, <a href="http://www.openslr.org/resources/12/test-clean.tar.gz">test-clean.tar.gz</a> and <a href="http://www.openslr.org/resources/12/dev-clean.tar.gz">dev-clean.tar.gz</a> keep in <code>data</code> folder</p1><br>
+    <p1>2. Then extract each file and move .wav files into corresponding files we are created</p1><br>
+    <p1>3. The folders look like this</p1>
+    
+    
+    
+</p>
+
+<img src="images/lib_paths.png" alt="audio_maping" style="width:250px;height:250px;">
+
+<h2 style="color:blue">3.3 Data Preparation</h2>
+
+<p style="color:gray;font-size=15px">
+   Know we extract all .wav and .txt files, move to correspoinding folders    
+</p>
+
+Then create `train_mainfile.csv` and `test_mainfile.csv` those contains information about `wav_paths` and `txt_paths` for train and test data.
+
+Check the code in [Notebook](link)
+
+<h1 style="color:green">4. Exploratory Data Analysis (EDA)</h1>
+
+<h2 style="color:blue">4.1 Loading Data</h2>
+
+
+<ul style="color:gray;font-size=15px">
+    <li>1. Load <code>train_mainfile.csv</code></li>
+    <li>2. for EDA we take sample of data </li> 
+    
+</ul>
+
+<h2 style="color:blue">4.2 Data Exploration</h2>
+
+<h3>4.2.1. Let's listen to .wav file</h3>
+
+wav file : [1859-145701-0003.wav](https://github.com/Gopi-Durgaprasad/Speech-To-Text/blob/master/images/1859-145701-0003.wav)
+
+Text : ```AND THE OLD KING FELL ON HER NECK AND KISSED HER BUT SHE WAS VERY MUCH TROUBLED AND SAID DEAR FATHER LISTEN TO WHAT HAS BEFALLEN ME I SHOULD NEVER HAVE COME HOME AGAIN OUT OF THE GREAT WILD WOOD IF I HAD NOT COME TO AN IRON STOVE```
+
+Wav Plot :
+
+<img src="images/wave_plot.png">
+
+<h3>4.2.1. Cumulative Distribution Function (CDF) and (PDF) for duration</h3>
+
+<p float="left">
+  <img src="images/duration_pdf.png" width="400" />
+  <img src="images/duration_cdf.png" width="400" />
+</p>
+
+**Observation:** From above two plots we observe that most of durations in between 10sec to 16sec
+
+<h2 style="color:blue">4.3 Text Data Exploration</h2>
+
+<h3>4.3.1. Cumulative Distribution Function (CDF) and (PDF) for text_lengths</h3>
+
+<p float="left">
+  <img src="images/text_len_pdf.png" width="400" />
+  <img src="images/text_len_cdf.png" width="400" />
+</p>
+
+**Observation:** From above two plots we observe that most of text lengths in between 30 and 60
+
+<h3>4.3.2. Distributions of text_length and duration</h3>
+
+<img src="images/text_len_vs_duration.png">
+
+**Observation:** both are very different distributions
+
+<h3>4.3.2. Count plot of Characters</h3>
+
+<img src="images/character.png">
+
+**Observation:** From above frequency the most frequecy characters are ' '(space), 'E', 'T' and the low frequency characters are 'Z', 'X', ''', 'J' , 'Q'
+
+<h3>4.3.3. Frequency of words</h3>
+
+Number of unique words :  16421
+
+<img src="images/word_cloud.png" />
+<img src="images/word_cloud_2.png"/>
+
+<h3>4.3.4. Cumulative Distribution Function (CDF) and (PDF) for word frequency</h3>
+
+<p float="left">
+  <img src="images/word_pdf.png" width="400" />
+  <img src="images/word_cdf.png" width="400" />
+</p>
+
+**Observation:** from the above plots we observe very few words have high frequency, most of words are low frequency
+
+
+
 
 
