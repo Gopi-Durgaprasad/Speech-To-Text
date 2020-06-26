@@ -258,7 +258,47 @@ Number of unique words :  16421
 
 **Observation:** from the above plots we observe very few words have high frequency, most of words are low frequency
 
+<h1 style="color:green">5.  Feature Extraction from Audio </h1>
 
+<h2 style="color:blue">Description</h2>
 
+- Extracting features from audio data, The most importent step in ML is extracting features from raw data.
+
+- In this section we will see how to extract features from raw audio/speech
+- 1. What is simple wave and how it look likes ?
+- 2. What is complex wave and how it look likes ? 
+- 3. What is audio/speech wave and how it look likes ?
+- 4. Frequncy domine and time domine ?
+- 5. converting time domine to frequency domine (fft fast foure trasfram)
+- 6. What are the methodes to extract features from audio ?
+- 7. Mel-Frequency Cepstral Coefficients (MFCC)
+
+#### Check this notebook : <a href="https://github.com/Gopi-Durgaprasad/Speech-To-Text/blob/master/2.Extracting%20Features.ipynb">2.Extracting Features.ipynb</a>
+
+<h1 style="color:green">6.  Modeling </h1>
+
+- For model we are using deepspeech2 implementation
+
+- For more details check this paper : <a href="https://arxiv.org/pdf/1512.02595.pdf">Deep Speech 2: End-to-End Speech Recognition in
+English and Mandarin</a>
+
+<h1 style="color:green">7. Training </h1>
+
+Configuration is done in `config.py`.
+
+Training command:
+```
+python main.py
+```
+
+| Dataset | WER | CER |
+| :---: | :---: | :---: |
+| Librispeech clean | 11.20 | 3.36 |
+
+For more details check `main.py`
+
+<h2 style="color:green"> Pre-traine Model </h2>
+
+Download [hear](https://github.com/SeanNaren/deepspeech.pytorch/releases/download/v1.1/ted_pretrained.pth)
 
 
