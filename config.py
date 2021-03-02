@@ -28,5 +28,7 @@ class args:
     beta = (0.9, 0.999) # Adam betas
     max_norm = 400 # Norm cutoff to prevent explosion of gradients
     learning_anneal: 1.1 # Annealing applied to learning rate after each epoch
+        
+        
 
 
