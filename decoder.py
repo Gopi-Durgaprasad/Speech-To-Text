@@ -4,6 +4,7 @@ import Levenshtein as Lev
 import torch
 from six.moves import xrange
 
+
 class Decoder(object):
     """
     Basic decoder class from which all other decoders inherit. Implements several
