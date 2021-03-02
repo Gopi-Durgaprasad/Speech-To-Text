@@ -251,3 +251,4 @@ class DeepSpeech(nn.Module):
                 tmp *= x
             params += tmp
         return params
+    
